@@ -1,0 +1,14 @@
+{% extends "movies/base.html" %}
+
+{% block content %}
+    <p>电影名：{{ movie.name }}</p>
+    <p>导演：{{ movie.directors }}</p>
+    <p>主演：{{ movie.stars }}</p>
+    <p>类型：{{ movie.category }}</p>
+    <p>年份：{{ movie.year }}</p>
+    <p>评分：{{ movie.rate }}</p>
+    <p>时长：{{ movie.runtime }}</p>
+    <a href={{ movie.ticket }} >
+        <button >购票</button>
+    </a>
+{% endblock content %}

@@ -1,0 +1,14 @@
+{% extends "movies/base.html" %}
+
+{% block content %}
+    <p>正在上映</p>
+    <ul>
+        {% for movie in movies %}
+            <li>
+                <a href="{% url 'movies:movie' movie.id %}">{{ movie.name }}</a>
+            </li>
+        {% empty %}
+            <li>无</li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
